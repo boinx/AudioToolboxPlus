@@ -7,33 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5024F91318EDC6FD00B96639 /* NSValue+ATPAudioValueRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 5024F91218EDC6FD00B96639 /* NSValue+ATPAudioValueRange.m */; };
-		50A0A11618EAEE2400F20799 /* ATPAudioConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0A11118EAEE2400F20799 /* ATPAudioConverter.m */; };
-		50A0A11718EAEE2400F20799 /* ATPAudioConverter+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0A11318EAEE2400F20799 /* ATPAudioConverter+Properties.m */; };
-		50A0A11818EAEE2400F20799 /* NSError+ATPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0A11518EAEE2400F20799 /* NSError+ATPError.m */; };
-		50A27C1D1ABC7ADB006B3986 /* AudioToolbox_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A27C1C1ABC7ADB006B3986 /* AudioToolbox_Tests.m */; };
-		50A27C1E1ABC7ADB006B3986 /* libAudioToolboxPlus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A0A0E118EAED5A00F20799 /* libAudioToolboxPlus.a */; };
-		50A27C251ABC8390006B3986 /* AudioToolboxPlus_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A27C241ABC8390006B3986 /* AudioToolboxPlus_Tests.m */; };
-		50BCFE4718F5621C00227FC0 /* ATPAudioCompressionSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BCFE4618F5621C00227FC0 /* ATPAudioCompressionSession.m */; };
-		50BCFE5018F5866000227FC0 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 50BCFE4E18F5866000227FC0 /* TPCircularBuffer.c */; };
-		50BCFE5318F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 50BCFE5118F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.c */; };
-		50FD86271A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FD86261A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.m */; };
+		B6BD11611DDDD76E00505E9F /* ATPAudioConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0A11118EAEE2400F20799 /* ATPAudioConverter.m */; };
+		B6BD11621DDDD76E00505E9F /* ATPAudioConverter+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0A11318EAEE2400F20799 /* ATPAudioConverter+Properties.m */; };
+		B6BD11631DDDD76E00505E9F /* ATPAudioConverter+PropertiesFromDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FD86261A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.m */; };
+		B6BD11641DDDD76E00505E9F /* ATPAudioCompressionSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BCFE4618F5621C00227FC0 /* ATPAudioCompressionSession.m */; };
+		B6BD11651DDDD76E00505E9F /* NSError+ATPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0A11518EAEE2400F20799 /* NSError+ATPError.m */; };
+		B6BD11661DDDD76E00505E9F /* NSValue+ATPAudioValueRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 5024F91218EDC6FD00B96639 /* NSValue+ATPAudioValueRange.m */; };
+		B6BD11671DDDD76E00505E9F /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 50BCFE4E18F5866000227FC0 /* TPCircularBuffer.c */; };
+		B6BD11681DDDD76E00505E9F /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 50BCFE5118F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.c */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		50A27C1F1ABC7ADB006B3986 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 50A0A0D918EAED5A00F20799 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 50A0A0E018EAED5A00F20799;
-			remoteInfo = AudioToolboxPlus;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5024F91118EDC6FD00B96639 /* NSValue+ATPAudioValueRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+ATPAudioValueRange.h"; sourceTree = "<group>"; };
 		5024F91218EDC6FD00B96639 /* NSValue+ATPAudioValueRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+ATPAudioValueRange.m"; sourceTree = "<group>"; };
-		50A0A0E118EAED5A00F20799 /* libAudioToolboxPlus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAudioToolboxPlus.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A0A10C18EAEDBE00F20799 /* AudioToolboxPlus-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AudioToolboxPlus-Prefix.pch"; sourceTree = "<group>"; };
 		50A0A10D18EAEDBE00F20799 /* AudioToolboxPlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioToolboxPlus.h; sourceTree = "<group>"; };
 		50A0A11018EAEE2400F20799 /* ATPAudioConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPAudioConverter.h; sourceTree = "<group>"; };
@@ -42,7 +28,6 @@
 		50A0A11318EAEE2400F20799 /* ATPAudioConverter+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ATPAudioConverter+Properties.m"; sourceTree = "<group>"; };
 		50A0A11418EAEE2400F20799 /* NSError+ATPError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+ATPError.h"; sourceTree = "<group>"; };
 		50A0A11518EAEE2400F20799 /* NSError+ATPError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+ATPError.m"; sourceTree = "<group>"; };
-		50A27C181ABC7ADB006B3986 /* AudioToolboxPlus Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AudioToolboxPlus Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A27C1B1ABC7ADB006B3986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50A27C1C1ABC7ADB006B3986 /* AudioToolbox_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioToolbox_Tests.m; sourceTree = "<group>"; };
 		50A27C241ABC8390006B3986 /* AudioToolboxPlus_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioToolboxPlus_Tests.m; sourceTree = "<group>"; };
@@ -54,18 +39,8 @@
 		50BCFE5218F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
 		50FD86251A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ATPAudioConverter+PropertiesFromDictionary.h"; sourceTree = "<group>"; };
 		50FD86261A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ATPAudioConverter+PropertiesFromDictionary.m"; sourceTree = "<group>"; };
+		B6BD11581DDDD75800505E9F /* libAudioToolboxPlus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAudioToolboxPlus.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		50A27C151ABC7ADB006B3986 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				50A27C1E1ABC7ADB006B3986 /* libAudioToolboxPlus.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		50A0A0D818EAED5A00F20799 = {
@@ -81,8 +56,7 @@
 		50A0A0E218EAED5A00F20799 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50A0A0E118EAED5A00F20799 /* libAudioToolboxPlus.a */,
-				50A27C181ABC7ADB006B3986 /* AudioToolboxPlus Tests.xctest */,
+				B6BD11581DDDD75800505E9F /* libAudioToolboxPlus.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,11 +114,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		50A0A0E018EAED5A00F20799 /* AudioToolboxPlus */ = {
+		B6BD11571DDDD75800505E9F /* AudioToolboxPlus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50A0A10518EAED5A00F20799 /* Build configuration list for PBXNativeTarget "AudioToolboxPlus" */;
+			buildConfigurationList = B6BD115E1DDDD75800505E9F /* Build configuration list for PBXNativeTarget "AudioToolboxPlus" */;
 			buildPhases = (
-				50A0A0DD18EAED5A00F20799 /* Sources */,
+				B6BD11541DDDD75800505E9F /* Sources */,
 			);
 			buildRules = (
 			);
@@ -152,26 +126,8 @@
 			);
 			name = AudioToolboxPlus;
 			productName = AudioToolboxPlus;
-			productReference = 50A0A0E118EAED5A00F20799 /* libAudioToolboxPlus.a */;
+			productReference = B6BD11581DDDD75800505E9F /* libAudioToolboxPlus.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		50A27C171ABC7ADB006B3986 /* AudioToolboxPlus Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 50A27C231ABC7ADB006B3986 /* Build configuration list for PBXNativeTarget "AudioToolboxPlus Tests" */;
-			buildPhases = (
-				50A27C141ABC7ADB006B3986 /* Sources */,
-				50A27C151ABC7ADB006B3986 /* Frameworks */,
-				50A27C161ABC7ADB006B3986 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				50A27C201ABC7ADB006B3986 /* PBXTargetDependency */,
-			);
-			name = "AudioToolboxPlus Tests";
-			productName = "AudioToolboxPlus Tests";
-			productReference = 50A27C181ABC7ADB006B3986 /* AudioToolboxPlus Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -182,12 +138,14 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = McZonk;
 				TargetAttributes = {
-					50A27C171ABC7ADB006B3986 = {
-						CreatedOnToolsVersion = 6.1.1;
+					B6BD11571DDDD75800505E9F = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 6372P8EH2J;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 50A0A0DC18EAED5A00F20799 /* Build configuration list for PBXProject "AudioToolboxPlus-OSX" */;
+			buildConfigurationList = 50A0A0DC18EAED5A00F20799 /* Build configuration list for PBXProject "AudioToolboxPlus-iOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -199,56 +157,28 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				50A0A0E018EAED5A00F20799 /* AudioToolboxPlus */,
-				50A27C171ABC7ADB006B3986 /* AudioToolboxPlus Tests */,
+				B6BD11571DDDD75800505E9F /* AudioToolboxPlus */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		50A27C161ABC7ADB006B3986 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		50A0A0DD18EAED5A00F20799 /* Sources */ = {
+		B6BD11541DDDD75800505E9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50BCFE5318F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.c in Sources */,
-				50BCFE5018F5866000227FC0 /* TPCircularBuffer.c in Sources */,
-				50BCFE4718F5621C00227FC0 /* ATPAudioCompressionSession.m in Sources */,
-				50A0A11618EAEE2400F20799 /* ATPAudioConverter.m in Sources */,
-				5024F91318EDC6FD00B96639 /* NSValue+ATPAudioValueRange.m in Sources */,
-				50A0A11718EAEE2400F20799 /* ATPAudioConverter+Properties.m in Sources */,
-				50A0A11818EAEE2400F20799 /* NSError+ATPError.m in Sources */,
-				50FD86271A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		50A27C141ABC7ADB006B3986 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				50A27C251ABC8390006B3986 /* AudioToolboxPlus_Tests.m in Sources */,
-				50A27C1D1ABC7ADB006B3986 /* AudioToolbox_Tests.m in Sources */,
+				B6BD11611DDDD76E00505E9F /* ATPAudioConverter.m in Sources */,
+				B6BD11621DDDD76E00505E9F /* ATPAudioConverter+Properties.m in Sources */,
+				B6BD11631DDDD76E00505E9F /* ATPAudioConverter+PropertiesFromDictionary.m in Sources */,
+				B6BD11641DDDD76E00505E9F /* ATPAudioCompressionSession.m in Sources */,
+				B6BD11651DDDD76E00505E9F /* NSError+ATPError.m in Sources */,
+				B6BD11661DDDD76E00505E9F /* NSValue+ATPAudioValueRange.m in Sources */,
+				B6BD11671DDDD76E00505E9F /* TPCircularBuffer.c in Sources */,
+				B6BD11681DDDD76E00505E9F /* TPCircularBuffer+AudioBufferList.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		50A27C201ABC7ADB006B3986 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 50A0A0E018EAED5A00F20799 /* AudioToolboxPlus */;
-			targetProxy = 50A27C1F1ABC7ADB006B3986 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		50A0A10318EAED5A00F20799 /* Debug */ = {
@@ -289,9 +219,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -328,86 +258,61 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				SDKROOT = macosx;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		50A0A10618EAED5A00F20799 /* Debug */ = {
+		B6BD115F1DDDD75800505E9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AudioToolboxPlus-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		50A0A10718EAED5A00F20799 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AudioToolboxPlus-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		50A27C211ABC7ADB006B3986 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6372P8EH2J;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "AudioToolboxPlus Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "de.mczonk.$(PRODUCT_NAME:rfc1034identifier)";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		50A27C221ABC7ADB006B3986 /* Release */ = {
+		B6BD11601DDDD75800505E9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 6372P8EH2J;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "AudioToolboxPlus Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "de.mczonk.$(PRODUCT_NAME:rfc1034identifier)";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		50A0A0DC18EAED5A00F20799 /* Build configuration list for PBXProject "AudioToolboxPlus-OSX" */ = {
+		50A0A0DC18EAED5A00F20799 /* Build configuration list for PBXProject "AudioToolboxPlus-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50A0A10318EAED5A00F20799 /* Debug */,
@@ -416,23 +321,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50A0A10518EAED5A00F20799 /* Build configuration list for PBXNativeTarget "AudioToolboxPlus" */ = {
+		B6BD115E1DDDD75800505E9F /* Build configuration list for PBXNativeTarget "AudioToolboxPlus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50A0A10618EAED5A00F20799 /* Debug */,
-				50A0A10718EAED5A00F20799 /* Release */,
+				B6BD115F1DDDD75800505E9F /* Debug */,
+				B6BD11601DDDD75800505E9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		50A27C231ABC7ADB006B3986 /* Build configuration list for PBXNativeTarget "AudioToolboxPlus Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				50A27C211ABC7ADB006B3986 /* Debug */,
-				50A27C221ABC7ADB006B3986 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
