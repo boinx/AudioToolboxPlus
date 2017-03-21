@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95DB8F561E7BED6500130EED /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 95DB8F521E7BED6500130EED /* TPCircularBuffer.c */; };
+		95DB8F571E7BED6500130EED /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 95DB8F541E7BED6500130EED /* TPCircularBuffer+AudioBufferList.c */; };
 		B6BD11611DDDD76E00505E9F /* ATPAudioConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0A11118EAEE2400F20799 /* ATPAudioConverter.m */; };
 		B6BD11621DDDD76E00505E9F /* ATPAudioConverter+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0A11318EAEE2400F20799 /* ATPAudioConverter+Properties.m */; };
 		B6BD11631DDDD76E00505E9F /* ATPAudioConverter+PropertiesFromDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FD86261A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.m */; };
 		B6BD11641DDDD76E00505E9F /* ATPAudioCompressionSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BCFE4618F5621C00227FC0 /* ATPAudioCompressionSession.m */; };
 		B6BD11651DDDD76E00505E9F /* NSError+ATPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0A11518EAEE2400F20799 /* NSError+ATPError.m */; };
 		B6BD11661DDDD76E00505E9F /* NSValue+ATPAudioValueRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 5024F91218EDC6FD00B96639 /* NSValue+ATPAudioValueRange.m */; };
-		B6BD11671DDDD76E00505E9F /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 50BCFE4E18F5866000227FC0 /* TPCircularBuffer.c */; };
-		B6BD11681DDDD76E00505E9F /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 50BCFE5118F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,12 +33,12 @@
 		50A27C241ABC8390006B3986 /* AudioToolboxPlus_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioToolboxPlus_Tests.m; sourceTree = "<group>"; };
 		50BCFE4518F5621C00227FC0 /* ATPAudioCompressionSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPAudioCompressionSession.h; sourceTree = "<group>"; };
 		50BCFE4618F5621C00227FC0 /* ATPAudioCompressionSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPAudioCompressionSession.m; sourceTree = "<group>"; };
-		50BCFE4E18F5866000227FC0 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
-		50BCFE4F18F5866000227FC0 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
-		50BCFE5118F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
-		50BCFE5218F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
 		50FD86251A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ATPAudioConverter+PropertiesFromDictionary.h"; sourceTree = "<group>"; };
 		50FD86261A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ATPAudioConverter+PropertiesFromDictionary.m"; sourceTree = "<group>"; };
+		95DB8F521E7BED6500130EED /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
+		95DB8F531E7BED6500130EED /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
+		95DB8F541E7BED6500130EED /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
+		95DB8F551E7BED6500130EED /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
 		B6BD11581DDDD75800505E9F /* libAudioToolboxPlus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAudioToolboxPlus.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -85,10 +85,10 @@
 				50A0A11518EAEE2400F20799 /* NSError+ATPError.m */,
 				5024F91118EDC6FD00B96639 /* NSValue+ATPAudioValueRange.h */,
 				5024F91218EDC6FD00B96639 /* NSValue+ATPAudioValueRange.m */,
-				50BCFE4F18F5866000227FC0 /* TPCircularBuffer.h */,
-				50BCFE4E18F5866000227FC0 /* TPCircularBuffer.c */,
-				50BCFE5218F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.h */,
-				50BCFE5118F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.c */,
+				95DB8F521E7BED6500130EED /* TPCircularBuffer.c */,
+				95DB8F531E7BED6500130EED /* TPCircularBuffer.h */,
+				95DB8F541E7BED6500130EED /* TPCircularBuffer+AudioBufferList.c */,
+				95DB8F551E7BED6500130EED /* TPCircularBuffer+AudioBufferList.h */,
 			);
 			name = AudioToolboxPlus;
 			sourceTree = "<group>";
@@ -167,14 +167,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95DB8F561E7BED6500130EED /* TPCircularBuffer.c in Sources */,
 				B6BD11611DDDD76E00505E9F /* ATPAudioConverter.m in Sources */,
 				B6BD11621DDDD76E00505E9F /* ATPAudioConverter+Properties.m in Sources */,
 				B6BD11631DDDD76E00505E9F /* ATPAudioConverter+PropertiesFromDictionary.m in Sources */,
 				B6BD11641DDDD76E00505E9F /* ATPAudioCompressionSession.m in Sources */,
+				95DB8F571E7BED6500130EED /* TPCircularBuffer+AudioBufferList.c in Sources */,
 				B6BD11651DDDD76E00505E9F /* NSError+ATPError.m in Sources */,
 				B6BD11661DDDD76E00505E9F /* NSValue+ATPAudioValueRange.m in Sources */,
-				B6BD11671DDDD76E00505E9F /* TPCircularBuffer.c in Sources */,
-				B6BD11681DDDD76E00505E9F /* TPCircularBuffer+AudioBufferList.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +267,7 @@
 		B6BD115F1DDDD75800505E9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -288,6 +289,7 @@
 		B6BD11601DDDD75800505E9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
