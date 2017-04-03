@@ -153,26 +153,30 @@ static OSStatus ATPAudioCallback(AudioConverterRef inAudioConverter, UInt32 *ioN
 	return noErr;
 }
 
-- (void)encodeAudioPackets
+- (void)encodeAudioPacketsWithPresentationTimeStamp:(CMTime)presentationTimeStamp
 {
 	ATPAudioConverter * const converter = self.converter;
-		
+	
 	const size_t length = converter.maximumOutputPacketSize;
-
+	
+	if (!CMTIME_IS_VALID(presentationTimeStamp)) {
+		// Passed in timestamp is invalid, use the backup timestamp instead.
+		presentationTimeStamp = self.presentationTimeStamp;
+	}
 	while(1)
 	{
 		void *data = malloc(length);
-			
+		
 		UInt32 outputDataPackets = 1;
-			
+		
 		AudioBufferList outputData;
 		outputData.mNumberBuffers = 1;
 		outputData.mBuffers[0].mNumberChannels = 2;
 		outputData.mBuffers[0].mDataByteSize = (UInt32)length;
 		outputData.mBuffers[0].mData = data;
-			
+		
 		AudioStreamPacketDescription outputPacketDescription;
-			
+		
 		OSStatus status = AudioConverterFillComplexBuffer(converter.AudioConverter, ATPAudioCallback, (__bridge void *)self, &outputDataPackets, &outputData, &outputPacketDescription);
 		if(status != noErr)
 		{
@@ -183,24 +187,22 @@ static OSStatus ATPAudioCallback(AudioConverterRef inAudioConverter, UInt32 *ioN
 			{
 				break;
 			}
-				
+			
 			break;
 		}
-			
-		CMTime presentationTimeStamp = self.presentationTimeStamp;
-			
+		
 		CMBlockBufferRef dataBuffer = NULL;
 		status = CMBlockBufferCreateWithMemoryBlock(NULL, data, length, NULL, NULL, 0, outputPacketDescription.mDataByteSize, kCMBlockBufferAssureMemoryNowFlag, &dataBuffer); // data is consumed here, no more free
 		if(status != noErr)
 		{
 			break;
 		}
-			
+		
 		CMSampleBufferRef sampleBuffer = NULL;
 		CMAudioSampleBufferCreateWithPacketDescriptions(NULL, dataBuffer, true, NULL, NULL, self.outputFormatDescription, 1, presentationTimeStamp, &outputPacketDescription, &sampleBuffer);
 		
-		self.presentationTimeStamp = CMTimeAdd(presentationTimeStamp, CMSampleBufferGetDuration(sampleBuffer));
-
+		presentationTimeStamp = CMTimeAdd(presentationTimeStamp, CMSampleBufferGetDuration(sampleBuffer));
+		
 		if(sampleBuffer != NULL)
 		{
 			dispatch_async(self.delegateQueue, ^{
@@ -209,9 +211,11 @@ static OSStatus ATPAudioCallback(AudioConverterRef inAudioConverter, UInt32 *ioN
 				CFRelease(sampleBuffer);
 			});
 		}
-			
+		
 		CFRelease(dataBuffer);
 	}
+	
+	self.presentationTimeStamp = presentationTimeStamp;
 }
 
 - (BOOL)encodeSampleBuffer:(CMSampleBufferRef const)sampleBuffer
@@ -257,8 +261,9 @@ static OSStatus ATPAudioCallback(AudioConverterRef inAudioConverter, UInt32 *ioN
 			length -= lengthAtOffset;
 		}
 	}
-
-	[self encodeAudioPackets];
+	
+	CMTime presentationTimeStamp = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);
+	[self encodeAudioPacketsWithPresentationTimeStamp:presentationTimeStamp];
 	
 	return YES;
 }
@@ -266,9 +271,9 @@ static OSStatus ATPAudioCallback(AudioConverterRef inAudioConverter, UInt32 *ioN
 - (BOOL)finish
 {
 	self.finishing = YES;
-		
-	[self encodeAudioPackets];
-		
+	
+	[self encodeAudioPacketsWithPresentationTimeStamp:kCMTimeInvalid];
+	
 	return YES;
 }
 
