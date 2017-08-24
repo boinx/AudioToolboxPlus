@@ -163,7 +163,7 @@ static OSStatus ATPAudioCallback(AudioConverterRef inAudioConverter, UInt32 *ioN
 	const size_t length = converter.maximumOutputPacketSize;
 	CMTime currentPresentationTimeStamp = self.nextPresentationTimeStamp;
 	
-	NSLog(@"Timestamp difference: %f", CMTimeGetSeconds(CMTimeSubtract(inPresentationTimeStamp, currentPresentationTimeStamp)));
+	// NSLog(@"Timestamp difference: %f", CMTimeGetSeconds(CMTimeSubtract(inPresentationTimeStamp, currentPresentationTimeStamp)));
 	
 	// Calculate maximum available time range.
 	
@@ -184,7 +184,7 @@ static OSStatus ATPAudioCallback(AudioConverterRef inAudioConverter, UInt32 *ioN
 		CMTime oldRemainingCircularBufferDuration = CMTimeSubtract(remainingCircularBufferDuration, duration);
 		currentPresentationTimeStamp = CMTimeSubtract(inPresentationTimeStamp, oldRemainingCircularBufferDuration);
 		
-		NSLog(@"Compensated timestamp!");
+		// NSLog(@"Compensated timestamp!");
 	}
 	
 	while(1)
