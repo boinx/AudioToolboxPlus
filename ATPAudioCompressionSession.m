@@ -20,6 +20,7 @@ enum {
 
 @property (nonatomic, assign) UInt32 inputBytesPerFrame;
 
+@property (nonatomic, assign) AudioStreamBasicDescription inputFormat;
 @property (nonatomic, assign) AudioStreamBasicDescription outputFormat;
 @property (nonatomic, strong) __attribute__((NSObject)) CMAudioFormatDescriptionRef outputFormatDescription;
 
@@ -29,7 +30,7 @@ enum {
 @property (nonatomic, weak) id<ATPAudioCompressionSessionDelegate> delegate;
 @property (nonatomic, strong) dispatch_queue_t delegateQueue;
 
-@property (nonatomic, assign) CMTime presentationTimeStamp;
+@property (nonatomic, assign) CMTime nextPresentationTimeStamp;
 
 @property (nonatomic, assign) BOOL finishing;
 
@@ -70,6 +71,8 @@ enum {
 		return;
 	}
 	
+	self.inputFormat = *inputFormat;
+	
 	self.inputBytesPerFrame = inputFormat->mBytesPerFrame;
 	
 	AudioStreamBasicDescription outputFormat = self.outputFormat;
@@ -108,7 +111,7 @@ enum {
 	
 	self.outputFormatDescription = outputFormatDescription;
 	
-	self.presentationTimeStamp = kCMTimeZero;
+	self.nextPresentationTimeStamp = kCMTimeZero;
 	
 	CFRelease(outputFormatDescription);
 }
@@ -153,16 +156,37 @@ static OSStatus ATPAudioCallback(AudioConverterRef inAudioConverter, UInt32 *ioN
 	return noErr;
 }
 
-- (void)encodeAudioPacketsWithPresentationTimeStamp:(CMTime)presentationTimeStamp
+- (void)encodeAudioPacketsWithPresentationTimeStamp:(CMTime)inPresentationTimeStamp duration:(CMTime)duration
 {
 	ATPAudioConverter * const converter = self.converter;
 	
 	const size_t length = converter.maximumOutputPacketSize;
+	CMTime currentPresentationTimeStamp = self.nextPresentationTimeStamp;
 	
-	if (!CMTIME_IS_VALID(presentationTimeStamp)) {
-		// Passed in timestamp is invalid, use the backup timestamp instead.
-		presentationTimeStamp = self.presentationTimeStamp;
+	NSLog(@"Timestamp difference: %f", CMTimeGetSeconds(CMTimeSubtract(inPresentationTimeStamp, currentPresentationTimeStamp)));
+	
+	// Calculate maximum available time range.
+	
+	int32_t availableBytes;
+	TPCircularBufferTail(self.circularBuffer, &availableBytes);
+	
+	int32_t availableFrames = availableBytes / self.inputBytesPerFrame;
+	CMTime remainingCircularBufferDuration = CMTimeMake(availableFrames, self.inputFormat.mSampleRate);
+	CMTime maxAudioPresentationTimeStamp = CMTimeAdd(currentPresentationTimeStamp, remainingCircularBufferDuration);
+	
+	// Check if incoming presentation timestamp falls within available time range.
+	
+	if (CMTimeCompare(inPresentationTimeStamp, maxAudioPresentationTimeStamp) > 0)
+	{
+		// Otherwise the incoming timestamp made a jump into the future where the circular buffer does not have any sample data yet.
+		// Instead of simply jumping to the incoming timestamp, the remaining old data in the circular buffer needs to be compensated for.
+		
+		CMTime oldRemainingCircularBufferDuration = CMTimeSubtract(remainingCircularBufferDuration, duration);
+		currentPresentationTimeStamp = CMTimeSubtract(inPresentationTimeStamp, oldRemainingCircularBufferDuration);
+		
+		NSLog(@"Compensated timestamp!");
 	}
+	
 	while(1)
 	{
 		void *data = malloc(length);
@@ -199,9 +223,13 @@ static OSStatus ATPAudioCallback(AudioConverterRef inAudioConverter, UInt32 *ioN
 		}
 		
 		CMSampleBufferRef sampleBuffer = NULL;
-		CMAudioSampleBufferCreateWithPacketDescriptions(NULL, dataBuffer, true, NULL, NULL, self.outputFormatDescription, 1, presentationTimeStamp, &outputPacketDescription, &sampleBuffer);
+		status = CMAudioSampleBufferCreateWithPacketDescriptions(NULL, dataBuffer, true, NULL, NULL, self.outputFormatDescription, 1, currentPresentationTimeStamp, &outputPacketDescription, &sampleBuffer);
+		if(status != noErr)
+		{
+			break;
+		}
 		
-		presentationTimeStamp = CMTimeAdd(presentationTimeStamp, CMSampleBufferGetDuration(sampleBuffer));
+		currentPresentationTimeStamp = CMTimeAdd(currentPresentationTimeStamp, CMSampleBufferGetDuration(sampleBuffer));
 		
 		if(sampleBuffer != NULL)
 		{
@@ -215,7 +243,7 @@ static OSStatus ATPAudioCallback(AudioConverterRef inAudioConverter, UInt32 *ioN
 		CFRelease(dataBuffer);
 	}
 	
-	self.presentationTimeStamp = presentationTimeStamp;
+	self.nextPresentationTimeStamp = currentPresentationTimeStamp;
 }
 
 - (BOOL)encodeSampleBuffer:(CMSampleBufferRef const)sampleBuffer
@@ -263,7 +291,8 @@ static OSStatus ATPAudioCallback(AudioConverterRef inAudioConverter, UInt32 *ioN
 	}
 	
 	CMTime presentationTimeStamp = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);
-	[self encodeAudioPacketsWithPresentationTimeStamp:presentationTimeStamp];
+	CMTime duration = CMSampleBufferGetDuration(sampleBuffer);
+	[self encodeAudioPacketsWithPresentationTimeStamp:presentationTimeStamp duration:duration];
 	
 	return YES;
 }
@@ -272,7 +301,7 @@ static OSStatus ATPAudioCallback(AudioConverterRef inAudioConverter, UInt32 *ioN
 {
 	self.finishing = YES;
 	
-	[self encodeAudioPacketsWithPresentationTimeStamp:kCMTimeInvalid];
+	[self encodeAudioPacketsWithPresentationTimeStamp:kCMTimeInvalid duration:kCMTimeZero];
 	
 	return YES;
 }
