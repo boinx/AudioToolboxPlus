@@ -134,7 +134,7 @@ static OSStatus ATPAudioCallback(AudioConverterRef inAudioConverter, UInt32 *ioN
 	int32_t availableBytes;
 	void * const data = TPCircularBufferTail(circularBuffer, &availableBytes);
 	
-	if(self.finishing)
+	if(self.finishing & bytesPerFrame>0)
 	{
 		bufferLength = availableBytes;
 		*ioNumberDataPackets = bufferLength / bytesPerFrame;
@@ -170,7 +170,8 @@ static OSStatus ATPAudioCallback(AudioConverterRef inAudioConverter, UInt32 *ioN
 	int32_t availableBytes;
 	TPCircularBufferTail(self.circularBuffer, &availableBytes);
 	
-	int32_t availableFrames = availableBytes / self.inputBytesPerFrame;
+	UInt32 inputBytesPerFrame = self.inputBytesPerFrame;	// prevent a devision by zero crash
+	int32_t availableFrames = inputBytesPerFrame > 0 ? availableBytes / inputBytesPerFrame : 0;
 	CMTime remainingCircularBufferDuration = CMTimeMake(availableFrames, self.inputFormat.mSampleRate);
 	CMTime maxAudioPresentationTimeStamp = CMTimeAdd(currentPresentationTimeStamp, remainingCircularBufferDuration);
 	
