@@ -134,7 +134,7 @@ static OSStatus ATPAudioCallback(AudioConverterRef inAudioConverter, UInt32 *ioN
 	int32_t availableBytes;
 	void * const data = TPCircularBufferTail(circularBuffer, &availableBytes);
 	
-	if(self.finishing & bytesPerFrame>0)
+	if(self.finishing && (bytesPerFrame>0))
 	{
 		bufferLength = availableBytes;
 		*ioNumberDataPackets = bufferLength / bytesPerFrame;
