@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		481C256E20C7D20E00A20EEF /* Info_template.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4857226620C669AF00BF6CEC /* Info_template.plist */; };
 		481C256F20C7D28F00A20EEF /* ATPAudioCompressionSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 50BCFE4518F5621C00227FC0 /* ATPAudioCompressionSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		481C257020C7D29500A20EEF /* ATPAudioConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 50A0A11018EAEE2400F20799 /* ATPAudioConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		481C257120C7D29700A20EEF /* ATPAudioConverter+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = 50A0A11218EAEE2400F20799 /* ATPAudioConverter+Properties.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -206,7 +205,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = McZonk;
+				ORGANIZATIONNAME = "Boinx Software Ltd.";
 				TargetAttributes = {
 					4857226220C669AF00BF6CEC = {
 						CreatedOnToolsVersion = 9.4;
@@ -240,7 +239,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				481C256E20C7D20E00A20EEF /* Info_template.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
