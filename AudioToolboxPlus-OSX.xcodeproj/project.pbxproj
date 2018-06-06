@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		481C256E20C7D20E00A20EEF /* Info_template.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4857226620C669AF00BF6CEC /* Info_template.plist */; };
+		481C256F20C7D28F00A20EEF /* ATPAudioCompressionSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 50BCFE4518F5621C00227FC0 /* ATPAudioCompressionSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		481C257020C7D29500A20EEF /* ATPAudioConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 50A0A11018EAEE2400F20799 /* ATPAudioConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		481C257120C7D29700A20EEF /* ATPAudioConverter+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = 50A0A11218EAEE2400F20799 /* ATPAudioConverter+Properties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		481C257220C7D29E00A20EEF /* ATPAudioConverter+PropertiesFromDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 50FD86251A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		481C257320C7D2A300A20EEF /* NSError+ATPError.h in Headers */ = {isa = PBXBuildFile; fileRef = 50A0A11418EAEE2400F20799 /* NSError+ATPError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		481C257420C7D2A900A20EEF /* NSValue+ATPAudioValueRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 5024F91118EDC6FD00B96639 /* NSValue+ATPAudioValueRange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		481C257520C7D2AF00A20EEF /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 50BCFE4F18F5866000227FC0 /* TPCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4857226720C669AF00BF6CEC /* AudioToolboxPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = 4857226520C669AF00BF6CEC /* AudioToolboxPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4857226B20C66A1A00BF6CEC /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 50BCFE4E18F5866000227FC0 /* TPCircularBuffer.c */; };
 		4857226C20C66A1A00BF6CEC /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 50BCFE5118F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.c */; };
@@ -23,11 +31,10 @@
 /* Begin PBXFileReference section */
 		4857226320C669AF00BF6CEC /* AudioToolboxPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AudioToolboxPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4857226520C669AF00BF6CEC /* AudioToolboxPlus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioToolboxPlus.h; sourceTree = "<group>"; };
-		4857226620C669AF00BF6CEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4857226620C669AF00BF6CEC /* Info_template.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_template.plist; sourceTree = "<group>"; };
 		5024F91118EDC6FD00B96639 /* NSValue+ATPAudioValueRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+ATPAudioValueRange.h"; sourceTree = "<group>"; };
 		5024F91218EDC6FD00B96639 /* NSValue+ATPAudioValueRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+ATPAudioValueRange.m"; sourceTree = "<group>"; };
 		50A0A10C18EAEDBE00F20799 /* AudioToolboxPlus-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AudioToolboxPlus-Prefix.pch"; sourceTree = "<group>"; };
-		50A0A10D18EAEDBE00F20799 /* AudioToolboxPlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioToolboxPlus.h; sourceTree = "<group>"; };
 		50A0A11018EAEE2400F20799 /* ATPAudioConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPAudioConverter.h; sourceTree = "<group>"; };
 		50A0A11118EAEE2400F20799 /* ATPAudioConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPAudioConverter.m; sourceTree = "<group>"; };
 		50A0A11218EAEE2400F20799 /* ATPAudioConverter+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ATPAudioConverter+Properties.h"; sourceTree = "<group>"; };
@@ -66,21 +73,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4857226420C669AF00BF6CEC /* AudioToolboxPlus */ = {
-			isa = PBXGroup;
-			children = (
-				4857226520C669AF00BF6CEC /* AudioToolboxPlus.h */,
-				4857226620C669AF00BF6CEC /* Info.plist */,
-			);
-			path = AudioToolboxPlus;
-			sourceTree = "<group>";
-		};
 		50A0A0D818EAED5A00F20799 = {
 			isa = PBXGroup;
 			children = (
 				50A0A10B18EAEDB300F20799 /* AudioToolboxPlus */,
 				50A27C191ABC7ADB006B3986 /* AudioToolboxPlus Tests */,
-				4857226420C669AF00BF6CEC /* AudioToolboxPlus */,
 				50A0A0E318EAED5A00F20799 /* Frameworks */,
 				50A0A0E218EAED5A00F20799 /* Products */,
 			);
@@ -106,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				50A0A10C18EAEDBE00F20799 /* AudioToolboxPlus-Prefix.pch */,
-				50A0A10D18EAEDBE00F20799 /* AudioToolboxPlus.h */,
+				4857226520C669AF00BF6CEC /* AudioToolboxPlus.h */,
 				50A0A11018EAEE2400F20799 /* ATPAudioConverter.h */,
 				50A0A11118EAEE2400F20799 /* ATPAudioConverter.m */,
 				50A0A11218EAEE2400F20799 /* ATPAudioConverter+Properties.h */,
@@ -123,6 +120,7 @@
 				50BCFE4E18F5866000227FC0 /* TPCircularBuffer.c */,
 				50BCFE5218F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.h */,
 				50BCFE5118F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.c */,
+				4857226620C669AF00BF6CEC /* Info_template.plist */,
 			);
 			name = AudioToolboxPlus;
 			sourceTree = "<group>";
@@ -153,6 +151,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4857226720C669AF00BF6CEC /* AudioToolboxPlus.h in Headers */,
+				481C256F20C7D28F00A20EEF /* ATPAudioCompressionSession.h in Headers */,
+				481C257020C7D29500A20EEF /* ATPAudioConverter.h in Headers */,
+				481C257120C7D29700A20EEF /* ATPAudioConverter+Properties.h in Headers */,
+				481C257220C7D29E00A20EEF /* ATPAudioConverter+PropertiesFromDictionary.h in Headers */,
+				481C257320C7D2A300A20EEF /* NSError+ATPError.h in Headers */,
+				481C257420C7D2A900A20EEF /* NSValue+ATPAudioValueRange.h in Headers */,
+				481C257520C7D2AF00A20EEF /* TPCircularBuffer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,8 +229,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				50A27C171ABC7ADB006B3986 /* AudioToolboxPlus Tests */,
 				4857226220C669AF00BF6CEC /* AudioToolboxPlus */,
+				50A27C171ABC7ADB006B3986 /* AudioToolboxPlus Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				481C256E20C7D20E00A20EEF /* Info_template.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,10 +309,9 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = AudioToolboxPlus/Info.plist;
+				INFOPLIST_FILE = Info_template.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.boinx.AudioToolboxPlus;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -344,10 +349,9 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = AudioToolboxPlus/Info.plist;
+				INFOPLIST_FILE = Info_template.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.boinx.AudioToolboxPlus;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

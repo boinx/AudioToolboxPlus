@@ -5,7 +5,7 @@
 
 @implementation ATPAudioConverter (PropertiesFromDictionary)
 
-- (void)setPropertiesFromDictionary:(NSDictionary *)dictionary error:(NSError **)error
+- (void)setPropertiesFromDictionary:(NSDictionary *)dictionary error:(NSError * __autoreleasing *)error
 {
 	[dictionary enumerateKeysAndObjectsUsingBlock:^(NSNumber *propertyValue, id value, BOOL *stop) {
 		UInt32 property = propertyValue.intValue;
