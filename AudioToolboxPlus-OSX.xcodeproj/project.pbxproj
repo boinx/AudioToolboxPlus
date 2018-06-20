@@ -13,10 +13,7 @@
 		481C257220C7D29E00A20EEF /* ATPAudioConverter+PropertiesFromDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 50FD86251A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		481C257320C7D2A300A20EEF /* NSError+ATPError.h in Headers */ = {isa = PBXBuildFile; fileRef = 50A0A11418EAEE2400F20799 /* NSError+ATPError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		481C257420C7D2A900A20EEF /* NSValue+ATPAudioValueRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 5024F91118EDC6FD00B96639 /* NSValue+ATPAudioValueRange.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		481C257520C7D2AF00A20EEF /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 50BCFE4F18F5866000227FC0 /* TPCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4857226720C669AF00BF6CEC /* AudioToolboxPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = 4857226520C669AF00BF6CEC /* AudioToolboxPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4857226B20C66A1A00BF6CEC /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 50BCFE4E18F5866000227FC0 /* TPCircularBuffer.c */; };
-		4857226C20C66A1A00BF6CEC /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 50BCFE5118F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.c */; };
 		4857226D20C66A2F00BF6CEC /* ATPAudioConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0A11118EAEE2400F20799 /* ATPAudioConverter.m */; };
 		4857226E20C66A2F00BF6CEC /* ATPAudioConverter+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0A11318EAEE2400F20799 /* ATPAudioConverter+Properties.m */; };
 		4857226F20C66A2F00BF6CEC /* ATPAudioConverter+PropertiesFromDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FD86261A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.m */; };
@@ -25,6 +22,12 @@
 		4857227220C66A3600BF6CEC /* NSError+ATPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0A11518EAEE2400F20799 /* NSError+ATPError.m */; };
 		50A27C1D1ABC7ADB006B3986 /* AudioToolbox_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A27C1C1ABC7ADB006B3986 /* AudioToolbox_Tests.m */; };
 		50A27C251ABC8390006B3986 /* AudioToolboxPlus_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A27C241ABC8390006B3986 /* AudioToolboxPlus_Tests.m */; };
+		959F9AE320D1698700A4DB3A /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 959F9ADD20D1698600A4DB3A /* README.markdown */; };
+		959F9AE420D1698700A4DB3A /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 959F9ADE20D1698600A4DB3A /* TPCircularBuffer+AudioBufferList.c */; };
+		959F9AE520D1698700A4DB3A /* TPCircularBuffer+AudioBufferList.h in Headers */ = {isa = PBXBuildFile; fileRef = 959F9ADF20D1698600A4DB3A /* TPCircularBuffer+AudioBufferList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		959F9AE620D1698700A4DB3A /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 959F9AE020D1698600A4DB3A /* TPCircularBuffer.c */; };
+		959F9AE720D1698700A4DB3A /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 959F9AE120D1698600A4DB3A /* TPCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		959F9AE820D1698700A4DB3A /* TPCircularBuffer.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 959F9AE220D1698600A4DB3A /* TPCircularBuffer.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,12 +49,14 @@
 		50A27C241ABC8390006B3986 /* AudioToolboxPlus_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioToolboxPlus_Tests.m; sourceTree = "<group>"; };
 		50BCFE4518F5621C00227FC0 /* ATPAudioCompressionSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPAudioCompressionSession.h; sourceTree = "<group>"; };
 		50BCFE4618F5621C00227FC0 /* ATPAudioCompressionSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPAudioCompressionSession.m; sourceTree = "<group>"; };
-		50BCFE4E18F5866000227FC0 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
-		50BCFE4F18F5866000227FC0 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
-		50BCFE5118F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
-		50BCFE5218F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
 		50FD86251A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ATPAudioConverter+PropertiesFromDictionary.h"; sourceTree = "<group>"; };
 		50FD86261A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ATPAudioConverter+PropertiesFromDictionary.m"; sourceTree = "<group>"; };
+		959F9ADD20D1698600A4DB3A /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
+		959F9ADE20D1698600A4DB3A /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
+		959F9ADF20D1698600A4DB3A /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
+		959F9AE020D1698600A4DB3A /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
+		959F9AE120D1698600A4DB3A /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
+		959F9AE220D1698600A4DB3A /* TPCircularBuffer.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TPCircularBuffer.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,7 @@
 		50A0A10B18EAEDB300F20799 /* AudioToolboxPlus */ = {
 			isa = PBXGroup;
 			children = (
+				959F9ADC20D1698600A4DB3A /* TPCircularBuffer */,
 				50A0A10C18EAEDBE00F20799 /* AudioToolboxPlus-Prefix.pch */,
 				4857226520C669AF00BF6CEC /* AudioToolboxPlus.h */,
 				50A0A11018EAEE2400F20799 /* ATPAudioConverter.h */,
@@ -115,10 +121,6 @@
 				50A0A11518EAEE2400F20799 /* NSError+ATPError.m */,
 				5024F91118EDC6FD00B96639 /* NSValue+ATPAudioValueRange.h */,
 				5024F91218EDC6FD00B96639 /* NSValue+ATPAudioValueRange.m */,
-				50BCFE4F18F5866000227FC0 /* TPCircularBuffer.h */,
-				50BCFE4E18F5866000227FC0 /* TPCircularBuffer.c */,
-				50BCFE5218F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.h */,
-				50BCFE5118F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.c */,
 				4857226620C669AF00BF6CEC /* Info_template.plist */,
 			);
 			name = AudioToolboxPlus;
@@ -142,6 +144,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		959F9ADC20D1698600A4DB3A /* TPCircularBuffer */ = {
+			isa = PBXGroup;
+			children = (
+				959F9ADD20D1698600A4DB3A /* README.markdown */,
+				959F9ADE20D1698600A4DB3A /* TPCircularBuffer+AudioBufferList.c */,
+				959F9ADF20D1698600A4DB3A /* TPCircularBuffer+AudioBufferList.h */,
+				959F9AE020D1698600A4DB3A /* TPCircularBuffer.c */,
+				959F9AE120D1698600A4DB3A /* TPCircularBuffer.h */,
+				959F9AE220D1698600A4DB3A /* TPCircularBuffer.podspec */,
+			);
+			path = TPCircularBuffer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -155,8 +170,9 @@
 				481C257120C7D29700A20EEF /* ATPAudioConverter+Properties.h in Headers */,
 				481C257220C7D29E00A20EEF /* ATPAudioConverter+PropertiesFromDictionary.h in Headers */,
 				481C257320C7D2A300A20EEF /* NSError+ATPError.h in Headers */,
+				959F9AE520D1698700A4DB3A /* TPCircularBuffer+AudioBufferList.h in Headers */,
+				959F9AE720D1698700A4DB3A /* TPCircularBuffer.h in Headers */,
 				481C257420C7D2A900A20EEF /* NSValue+ATPAudioValueRange.h in Headers */,
-				481C257520C7D2AF00A20EEF /* TPCircularBuffer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +255,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				959F9AE320D1698700A4DB3A /* README.markdown in Resources */,
+				959F9AE820D1698700A4DB3A /* TPCircularBuffer.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,14 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				959F9AE420D1698700A4DB3A /* TPCircularBuffer+AudioBufferList.c in Sources */,
 				4857227220C66A3600BF6CEC /* NSError+ATPError.m in Sources */,
 				4857226D20C66A2F00BF6CEC /* ATPAudioConverter.m in Sources */,
 				4857226E20C66A2F00BF6CEC /* ATPAudioConverter+Properties.m in Sources */,
 				4857226F20C66A2F00BF6CEC /* ATPAudioConverter+PropertiesFromDictionary.m in Sources */,
 				4857227020C66A2F00BF6CEC /* ATPAudioCompressionSession.m in Sources */,
+				959F9AE620D1698700A4DB3A /* TPCircularBuffer.c in Sources */,
 				4857227120C66A2F00BF6CEC /* NSValue+ATPAudioValueRange.m in Sources */,
-				4857226B20C66A1A00BF6CEC /* TPCircularBuffer.c in Sources */,
-				4857226C20C66A1A00BF6CEC /* TPCircularBuffer+AudioBufferList.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,10 +415,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/TPCircularBuffer";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -436,9 +456,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/TPCircularBuffer";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
