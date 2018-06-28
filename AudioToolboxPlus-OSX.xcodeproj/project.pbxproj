@@ -24,9 +24,9 @@
 		50A27C251ABC8390006B3986 /* AudioToolboxPlus_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A27C241ABC8390006B3986 /* AudioToolboxPlus_Tests.m */; };
 		959F9AE320D1698700A4DB3A /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 959F9ADD20D1698600A4DB3A /* README.markdown */; };
 		959F9AE420D1698700A4DB3A /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 959F9ADE20D1698600A4DB3A /* TPCircularBuffer+AudioBufferList.c */; };
-		959F9AE520D1698700A4DB3A /* TPCircularBuffer+AudioBufferList.h in Headers */ = {isa = PBXBuildFile; fileRef = 959F9ADF20D1698600A4DB3A /* TPCircularBuffer+AudioBufferList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		959F9AE520D1698700A4DB3A /* TPCircularBuffer+AudioBufferList.h in Headers */ = {isa = PBXBuildFile; fileRef = 959F9ADF20D1698600A4DB3A /* TPCircularBuffer+AudioBufferList.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		959F9AE620D1698700A4DB3A /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 959F9AE020D1698600A4DB3A /* TPCircularBuffer.c */; };
-		959F9AE720D1698700A4DB3A /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 959F9AE120D1698600A4DB3A /* TPCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		959F9AE720D1698700A4DB3A /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 959F9AE120D1698600A4DB3A /* TPCircularBuffer.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		959F9AE820D1698700A4DB3A /* TPCircularBuffer.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 959F9AE220D1698600A4DB3A /* TPCircularBuffer.podspec */; };
 /* End PBXBuildFile section */
 
@@ -170,9 +170,9 @@
 				481C257120C7D29700A20EEF /* ATPAudioConverter+Properties.h in Headers */,
 				481C257220C7D29E00A20EEF /* ATPAudioConverter+PropertiesFromDictionary.h in Headers */,
 				481C257320C7D2A300A20EEF /* NSError+ATPError.h in Headers */,
+				481C257420C7D2A900A20EEF /* NSValue+ATPAudioValueRange.h in Headers */,
 				959F9AE520D1698700A4DB3A /* TPCircularBuffer+AudioBufferList.h in Headers */,
 				959F9AE720D1698700A4DB3A /* TPCircularBuffer.h in Headers */,
-				481C257420C7D2A900A20EEF /* NSValue+ATPAudioValueRange.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
