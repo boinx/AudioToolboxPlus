@@ -26,4 +26,4 @@ FOUNDATION_EXPORT const unsigned char AudioToolboxPlusVersionString[];
 
 #import "NSValue+ATPAudioValueRange.h"
 
-#import "TPCircularBuffer.h"
+#import <AudioToolboxPlus/TPCircularBuffer.h>
