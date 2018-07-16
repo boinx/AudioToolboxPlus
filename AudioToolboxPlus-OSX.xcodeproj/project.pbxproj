@@ -25,6 +25,7 @@
 		4857227220C66A3600BF6CEC /* NSError+ATPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0A11518EAEE2400F20799 /* NSError+ATPError.m */; };
 		50A27C1D1ABC7ADB006B3986 /* AudioToolbox_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A27C1C1ABC7ADB006B3986 /* AudioToolbox_Tests.m */; };
 		50A27C251ABC8390006B3986 /* AudioToolboxPlus_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A27C241ABC8390006B3986 /* AudioToolboxPlus_Tests.m */; };
+		C7D1CA3A20FCB5F600D4728E /* TPCircularBuffer+AudioBufferList.h in Headers */ = {isa = PBXBuildFile; fileRef = 50BCFE5218F58C4400227FC0 /* TPCircularBuffer+AudioBufferList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +158,7 @@
 				481C257320C7D2A300A20EEF /* NSError+ATPError.h in Headers */,
 				481C257420C7D2A900A20EEF /* NSValue+ATPAudioValueRange.h in Headers */,
 				481C257520C7D2AF00A20EEF /* TPCircularBuffer.h in Headers */,
+				C7D1CA3A20FCB5F600D4728E /* TPCircularBuffer+AudioBufferList.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
