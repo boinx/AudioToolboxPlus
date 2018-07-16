@@ -26,7 +26,4 @@ FOUNDATION_EXPORT const unsigned char AudioToolboxPlusVersionString[];
 
 #import "NSValue+ATPAudioValueRange.h"
 
-// In Xcode 9.4. this doesn't work. TPCircularBuffer.h can't be found because it's located in a physical folder.
-// TODO : Test in Xcode 9.4.1. and beta 10.X
-//#import "TPCircularBuffer.h"
-
+#import "TPCircularBuffer.h"
