@@ -6,7 +6,10 @@
 //  Copyright © 2018 Boinx Software Ltd. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+
+//#if TARGET_OS_MACCATALYST
+//#else
+//#import <Cocoa/Cocoa.h>
 
 //! Project version number for AudioToolboxPlus.
 FOUNDATION_EXPORT double AudioToolboxPlusVersionNumber;
