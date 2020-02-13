@@ -15,7 +15,6 @@
 		F601DF8823F2DF730030119E /* ATPAudioCompressionSession.m in Sources */ = {isa = PBXBuildFile; fileRef = F601DF7723F2DF730030119E /* ATPAudioCompressionSession.m */; };
 		F601DF8923F2DF730030119E /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = F601DF7823F2DF730030119E /* TPCircularBuffer+AudioBufferList.c */; };
 		F601DF8A23F2DF730030119E /* NSError+ATPError.m in Sources */ = {isa = PBXBuildFile; fileRef = F601DF7923F2DF730030119E /* NSError+ATPError.m */; };
-		F601DF8B23F2DF730030119E /* AudioToolboxPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = F601DF7A23F2DF730030119E /* AudioToolboxPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F601DF8C23F2DF730030119E /* NSValue+ATPAudioValueRange.m in Sources */ = {isa = PBXBuildFile; fileRef = F601DF7B23F2DF730030119E /* NSValue+ATPAudioValueRange.m */; };
 		F601DF8D23F2DF730030119E /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = F601DF7C23F2DF730030119E /* TPCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F601DF8E23F2DF730030119E /* ATPAudioConverter+PropertiesFromDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = F601DF7D23F2DF730030119E /* ATPAudioConverter+PropertiesFromDictionary.m */; };
@@ -26,7 +25,7 @@
 		F601DF9323F2DF730030119E /* ATPAudioConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F601DF8223F2DF730030119E /* ATPAudioConverter.m */; };
 		F601DF9423F2DF730030119E /* ATPAudioConverter+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = F601DF8323F2DF730030119E /* ATPAudioConverter+Properties.m */; };
 		F601DF9523F2DF730030119E /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = F601DF8423F2DF730030119E /* TPCircularBuffer.c */; };
-		F61D98CC23F2E9E9002A0DD7 /* AudioToolboxPlus.h in Resources */ = {isa = PBXBuildFile; fileRef = F601DF7A23F2DF730030119E /* AudioToolboxPlus.h */; };
+		F61D98D823F2F2B6002A0DD7 /* AudioToolboxPlus_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F61D98D723F2F2B5002A0DD7 /* AudioToolboxPlus_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +38,6 @@
 		F601DF7723F2DF730030119E /* ATPAudioCompressionSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPAudioCompressionSession.m; sourceTree = "<group>"; };
 		F601DF7823F2DF730030119E /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
 		F601DF7923F2DF730030119E /* NSError+ATPError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+ATPError.m"; sourceTree = "<group>"; };
-		F601DF7A23F2DF730030119E /* AudioToolboxPlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioToolboxPlus.h; sourceTree = "<group>"; };
 		F601DF7B23F2DF730030119E /* NSValue+ATPAudioValueRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+ATPAudioValueRange.m"; sourceTree = "<group>"; };
 		F601DF7C23F2DF730030119E /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
 		F601DF7D23F2DF730030119E /* ATPAudioConverter+PropertiesFromDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ATPAudioConverter+PropertiesFromDictionary.m"; sourceTree = "<group>"; };
@@ -50,6 +48,7 @@
 		F601DF8223F2DF730030119E /* ATPAudioConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPAudioConverter.m; sourceTree = "<group>"; };
 		F601DF8323F2DF730030119E /* ATPAudioConverter+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ATPAudioConverter+Properties.m"; sourceTree = "<group>"; };
 		F601DF8423F2DF730030119E /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
+		F61D98D723F2F2B5002A0DD7 /* AudioToolboxPlus_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioToolboxPlus_iOS.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +101,7 @@
 		F601DF7323F2DF530030119E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F601DF7A23F2DF730030119E /* AudioToolboxPlus.h */,
+				F61D98D723F2F2B5002A0DD7 /* AudioToolboxPlus_iOS.h */,
 				F601DF7523F2DF730030119E /* ATPAudioCompressionSession.h */,
 				F601DF7723F2DF730030119E /* ATPAudioCompressionSession.m */,
 				F601DF7F23F2DF730030119E /* ATPAudioConverter.h */,
@@ -134,9 +133,9 @@
 				F601DF9023F2DF730030119E /* ATPAudioConverter.h in Headers */,
 				F601DF8523F2DF730030119E /* ATPAudioConverter+PropertiesFromDictionary.h in Headers */,
 				F601DF9223F2DF730030119E /* ATPAudioConverter+Properties.h in Headers */,
-				F601DF8B23F2DF730030119E /* AudioToolboxPlus.h in Headers */,
 				F601DF9123F2DF730030119E /* NSValue+ATPAudioValueRange.h in Headers */,
 				F601DF8623F2DF730030119E /* ATPAudioCompressionSession.h in Headers */,
+				F61D98D823F2F2B6002A0DD7 /* AudioToolboxPlus_iOS.h in Headers */,
 				F601DF8D23F2DF730030119E /* TPCircularBuffer.h in Headers */,
 				F601DF8723F2DF730030119E /* NSError+ATPError.h in Headers */,
 			);
@@ -200,7 +199,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F61D98CC23F2E9E9002A0DD7 /* AudioToolboxPlus.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
