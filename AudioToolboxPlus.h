@@ -6,6 +6,7 @@
 //  Copyright © 2018 Boinx Software Ltd. All rights reserved.
 //
 
+
 //! Project version number for AudioToolboxPlus.
 FOUNDATION_EXPORT double AudioToolboxPlusVersionNumber;
 
