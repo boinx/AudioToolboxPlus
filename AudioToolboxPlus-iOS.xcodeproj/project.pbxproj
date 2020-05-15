@@ -3,216 +3,271 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95DB8F561E7BED6500130EED /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 95DB8F521E7BED6500130EED /* TPCircularBuffer.c */; };
-		95DB8F571E7BED6500130EED /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 95DB8F541E7BED6500130EED /* TPCircularBuffer+AudioBufferList.c */; };
-		B6BD11611DDDD76E00505E9F /* ATPAudioConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0A11118EAEE2400F20799 /* ATPAudioConverter.m */; };
-		B6BD11621DDDD76E00505E9F /* ATPAudioConverter+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0A11318EAEE2400F20799 /* ATPAudioConverter+Properties.m */; };
-		B6BD11631DDDD76E00505E9F /* ATPAudioConverter+PropertiesFromDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FD86261A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.m */; };
-		B6BD11641DDDD76E00505E9F /* ATPAudioCompressionSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BCFE4618F5621C00227FC0 /* ATPAudioCompressionSession.m */; };
-		B6BD11651DDDD76E00505E9F /* NSError+ATPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0A11518EAEE2400F20799 /* NSError+ATPError.m */; };
-		B6BD11661DDDD76E00505E9F /* NSValue+ATPAudioValueRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 5024F91218EDC6FD00B96639 /* NSValue+ATPAudioValueRange.m */; };
+		F601DEF423F2BC9B0030119E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F601DEF323F2BC9B0030119E /* AudioToolbox.framework */; };
+		F601DEF623F2BCA40030119E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F601DEF523F2BCA40030119E /* Foundation.framework */; };
+		F601DF8523F2DF730030119E /* ATPAudioConverter+PropertiesFromDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = F601DF7423F2DF730030119E /* ATPAudioConverter+PropertiesFromDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F601DF8623F2DF730030119E /* ATPAudioCompressionSession.h in Headers */ = {isa = PBXBuildFile; fileRef = F601DF7523F2DF730030119E /* ATPAudioCompressionSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F601DF8723F2DF730030119E /* NSError+ATPError.h in Headers */ = {isa = PBXBuildFile; fileRef = F601DF7623F2DF730030119E /* NSError+ATPError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F601DF8823F2DF730030119E /* ATPAudioCompressionSession.m in Sources */ = {isa = PBXBuildFile; fileRef = F601DF7723F2DF730030119E /* ATPAudioCompressionSession.m */; };
+		F601DF8923F2DF730030119E /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = F601DF7823F2DF730030119E /* TPCircularBuffer+AudioBufferList.c */; };
+		F601DF8A23F2DF730030119E /* NSError+ATPError.m in Sources */ = {isa = PBXBuildFile; fileRef = F601DF7923F2DF730030119E /* NSError+ATPError.m */; };
+		F601DF8C23F2DF730030119E /* NSValue+ATPAudioValueRange.m in Sources */ = {isa = PBXBuildFile; fileRef = F601DF7B23F2DF730030119E /* NSValue+ATPAudioValueRange.m */; };
+		F601DF8D23F2DF730030119E /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = F601DF7C23F2DF730030119E /* TPCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F601DF8E23F2DF730030119E /* ATPAudioConverter+PropertiesFromDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = F601DF7D23F2DF730030119E /* ATPAudioConverter+PropertiesFromDictionary.m */; };
+		F601DF8F23F2DF730030119E /* TPCircularBuffer+AudioBufferList.h in Headers */ = {isa = PBXBuildFile; fileRef = F601DF7E23F2DF730030119E /* TPCircularBuffer+AudioBufferList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F601DF9023F2DF730030119E /* ATPAudioConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = F601DF7F23F2DF730030119E /* ATPAudioConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F601DF9123F2DF730030119E /* NSValue+ATPAudioValueRange.h in Headers */ = {isa = PBXBuildFile; fileRef = F601DF8023F2DF730030119E /* NSValue+ATPAudioValueRange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F601DF9223F2DF730030119E /* ATPAudioConverter+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = F601DF8123F2DF730030119E /* ATPAudioConverter+Properties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F601DF9323F2DF730030119E /* ATPAudioConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F601DF8223F2DF730030119E /* ATPAudioConverter.m */; };
+		F601DF9423F2DF730030119E /* ATPAudioConverter+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = F601DF8323F2DF730030119E /* ATPAudioConverter+Properties.m */; };
+		F601DF9523F2DF730030119E /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = F601DF8423F2DF730030119E /* TPCircularBuffer.c */; };
+		F61D98D823F2F2B6002A0DD7 /* AudioToolboxPlus_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F61D98D723F2F2B5002A0DD7 /* AudioToolboxPlus_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5024F91118EDC6FD00B96639 /* NSValue+ATPAudioValueRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+ATPAudioValueRange.h"; sourceTree = "<group>"; };
-		5024F91218EDC6FD00B96639 /* NSValue+ATPAudioValueRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+ATPAudioValueRange.m"; sourceTree = "<group>"; };
-		50A0A10C18EAEDBE00F20799 /* AudioToolboxPlus-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AudioToolboxPlus-Prefix.pch"; sourceTree = "<group>"; };
-		50A0A10D18EAEDBE00F20799 /* AudioToolboxPlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioToolboxPlus.h; sourceTree = "<group>"; };
-		50A0A11018EAEE2400F20799 /* ATPAudioConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPAudioConverter.h; sourceTree = "<group>"; };
-		50A0A11118EAEE2400F20799 /* ATPAudioConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPAudioConverter.m; sourceTree = "<group>"; };
-		50A0A11218EAEE2400F20799 /* ATPAudioConverter+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ATPAudioConverter+Properties.h"; sourceTree = "<group>"; };
-		50A0A11318EAEE2400F20799 /* ATPAudioConverter+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ATPAudioConverter+Properties.m"; sourceTree = "<group>"; };
-		50A0A11418EAEE2400F20799 /* NSError+ATPError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+ATPError.h"; sourceTree = "<group>"; };
-		50A0A11518EAEE2400F20799 /* NSError+ATPError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+ATPError.m"; sourceTree = "<group>"; };
-		50A27C1B1ABC7ADB006B3986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50A27C1C1ABC7ADB006B3986 /* AudioToolbox_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioToolbox_Tests.m; sourceTree = "<group>"; };
-		50A27C241ABC8390006B3986 /* AudioToolboxPlus_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioToolboxPlus_Tests.m; sourceTree = "<group>"; };
-		50BCFE4518F5621C00227FC0 /* ATPAudioCompressionSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPAudioCompressionSession.h; sourceTree = "<group>"; };
-		50BCFE4618F5621C00227FC0 /* ATPAudioCompressionSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPAudioCompressionSession.m; sourceTree = "<group>"; };
-		50FD86251A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ATPAudioConverter+PropertiesFromDictionary.h"; sourceTree = "<group>"; };
-		50FD86261A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ATPAudioConverter+PropertiesFromDictionary.m"; sourceTree = "<group>"; };
-		95DB8F521E7BED6500130EED /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
-		95DB8F531E7BED6500130EED /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
-		95DB8F541E7BED6500130EED /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
-		95DB8F551E7BED6500130EED /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
-		B6BD11581DDDD75800505E9F /* libAudioToolboxPlus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAudioToolboxPlus.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F601DEB823F2BB4B0030119E /* AudioToolboxPlus_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AudioToolboxPlus_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F601DEF323F2BC9B0030119E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F601DEF523F2BCA40030119E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F601DF7423F2DF730030119E /* ATPAudioConverter+PropertiesFromDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ATPAudioConverter+PropertiesFromDictionary.h"; sourceTree = "<group>"; };
+		F601DF7523F2DF730030119E /* ATPAudioCompressionSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPAudioCompressionSession.h; sourceTree = "<group>"; };
+		F601DF7623F2DF730030119E /* NSError+ATPError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+ATPError.h"; sourceTree = "<group>"; };
+		F601DF7723F2DF730030119E /* ATPAudioCompressionSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPAudioCompressionSession.m; sourceTree = "<group>"; };
+		F601DF7823F2DF730030119E /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
+		F601DF7923F2DF730030119E /* NSError+ATPError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+ATPError.m"; sourceTree = "<group>"; };
+		F601DF7B23F2DF730030119E /* NSValue+ATPAudioValueRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+ATPAudioValueRange.m"; sourceTree = "<group>"; };
+		F601DF7C23F2DF730030119E /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
+		F601DF7D23F2DF730030119E /* ATPAudioConverter+PropertiesFromDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ATPAudioConverter+PropertiesFromDictionary.m"; sourceTree = "<group>"; };
+		F601DF7E23F2DF730030119E /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
+		F601DF7F23F2DF730030119E /* ATPAudioConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPAudioConverter.h; sourceTree = "<group>"; };
+		F601DF8023F2DF730030119E /* NSValue+ATPAudioValueRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+ATPAudioValueRange.h"; sourceTree = "<group>"; };
+		F601DF8123F2DF730030119E /* ATPAudioConverter+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ATPAudioConverter+Properties.h"; sourceTree = "<group>"; };
+		F601DF8223F2DF730030119E /* ATPAudioConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPAudioConverter.m; sourceTree = "<group>"; };
+		F601DF8323F2DF730030119E /* ATPAudioConverter+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ATPAudioConverter+Properties.m"; sourceTree = "<group>"; };
+		F601DF8423F2DF730030119E /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
+		F61D98D723F2F2B5002A0DD7 /* AudioToolboxPlus_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioToolboxPlus_iOS.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		F601DEB523F2BB4B0030119E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F601DEF423F2BC9B0030119E /* AudioToolbox.framework in Frameworks */,
+				F601DEF623F2BCA40030119E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
-		50A0A0D818EAED5A00F20799 = {
+		F601DEAE23F2BB4B0030119E = {
 			isa = PBXGroup;
 			children = (
-				50A0A10B18EAEDB300F20799 /* AudioToolboxPlus */,
-				50A27C191ABC7ADB006B3986 /* AudioToolboxPlus Tests */,
-				50A0A0E318EAED5A00F20799 /* Frameworks */,
-				50A0A0E218EAED5A00F20799 /* Products */,
+				F601DF7123F2DEF10030119E /* AudioToolboxPlus-iOS */,
+				F601DEB923F2BB4B0030119E /* Products */,
+				F601DEF223F2BC9B0030119E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		50A0A0E218EAED5A00F20799 /* Products */ = {
+		F601DEB923F2BB4B0030119E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B6BD11581DDDD75800505E9F /* libAudioToolboxPlus.a */,
+				F601DEB823F2BB4B0030119E /* AudioToolboxPlus_iOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		50A0A0E318EAED5A00F20799 /* Frameworks */ = {
+		F601DEF223F2BC9B0030119E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F601DEF523F2BCA40030119E /* Foundation.framework */,
+				F601DEF323F2BC9B0030119E /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		50A0A10B18EAEDB300F20799 /* AudioToolboxPlus */ = {
+		F601DF7123F2DEF10030119E /* AudioToolboxPlus-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				50A0A10C18EAEDBE00F20799 /* AudioToolboxPlus-Prefix.pch */,
-				50A0A10D18EAEDBE00F20799 /* AudioToolboxPlus.h */,
-				50A0A11018EAEE2400F20799 /* ATPAudioConverter.h */,
-				50A0A11118EAEE2400F20799 /* ATPAudioConverter.m */,
-				50A0A11218EAEE2400F20799 /* ATPAudioConverter+Properties.h */,
-				50A0A11318EAEE2400F20799 /* ATPAudioConverter+Properties.m */,
-				50FD86251A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.h */,
-				50FD86261A3F732B00D804AC /* ATPAudioConverter+PropertiesFromDictionary.m */,
-				50BCFE4518F5621C00227FC0 /* ATPAudioCompressionSession.h */,
-				50BCFE4618F5621C00227FC0 /* ATPAudioCompressionSession.m */,
-				50A0A11418EAEE2400F20799 /* NSError+ATPError.h */,
-				50A0A11518EAEE2400F20799 /* NSError+ATPError.m */,
-				5024F91118EDC6FD00B96639 /* NSValue+ATPAudioValueRange.h */,
-				5024F91218EDC6FD00B96639 /* NSValue+ATPAudioValueRange.m */,
-				95DB8F521E7BED6500130EED /* TPCircularBuffer.c */,
-				95DB8F531E7BED6500130EED /* TPCircularBuffer.h */,
-				95DB8F541E7BED6500130EED /* TPCircularBuffer+AudioBufferList.c */,
-				95DB8F551E7BED6500130EED /* TPCircularBuffer+AudioBufferList.h */,
+				F601DF7323F2DF530030119E /* Source */,
 			);
-			name = AudioToolboxPlus;
+			name = "AudioToolboxPlus-iOS";
 			sourceTree = "<group>";
 		};
-		50A27C191ABC7ADB006B3986 /* AudioToolboxPlus Tests */ = {
+		F601DF7323F2DF530030119E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				50A27C1C1ABC7ADB006B3986 /* AudioToolbox_Tests.m */,
-				50A27C241ABC8390006B3986 /* AudioToolboxPlus_Tests.m */,
-				50A27C1A1ABC7ADB006B3986 /* Supporting Files */,
+				F61D98D723F2F2B5002A0DD7 /* AudioToolboxPlus_iOS.h */,
+				F601DF7523F2DF730030119E /* ATPAudioCompressionSession.h */,
+				F601DF7723F2DF730030119E /* ATPAudioCompressionSession.m */,
+				F601DF7F23F2DF730030119E /* ATPAudioConverter.h */,
+				F601DF8223F2DF730030119E /* ATPAudioConverter.m */,
+				F601DF8123F2DF730030119E /* ATPAudioConverter+Properties.h */,
+				F601DF8323F2DF730030119E /* ATPAudioConverter+Properties.m */,
+				F601DF7423F2DF730030119E /* ATPAudioConverter+PropertiesFromDictionary.h */,
+				F601DF7D23F2DF730030119E /* ATPAudioConverter+PropertiesFromDictionary.m */,
+				F601DF7623F2DF730030119E /* NSError+ATPError.h */,
+				F601DF7923F2DF730030119E /* NSError+ATPError.m */,
+				F601DF8023F2DF730030119E /* NSValue+ATPAudioValueRange.h */,
+				F601DF7B23F2DF730030119E /* NSValue+ATPAudioValueRange.m */,
+				F601DF8423F2DF730030119E /* TPCircularBuffer.c */,
+				F601DF7C23F2DF730030119E /* TPCircularBuffer.h */,
+				F601DF7823F2DF730030119E /* TPCircularBuffer+AudioBufferList.c */,
+				F601DF7E23F2DF730030119E /* TPCircularBuffer+AudioBufferList.h */,
 			);
-			path = "AudioToolboxPlus Tests";
-			sourceTree = "<group>";
-		};
-		50A27C1A1ABC7ADB006B3986 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				50A27C1B1ABC7ADB006B3986 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			name = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		F601DEB323F2BB4B0030119E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F601DF8F23F2DF730030119E /* TPCircularBuffer+AudioBufferList.h in Headers */,
+				F601DF9023F2DF730030119E /* ATPAudioConverter.h in Headers */,
+				F601DF8523F2DF730030119E /* ATPAudioConverter+PropertiesFromDictionary.h in Headers */,
+				F601DF9223F2DF730030119E /* ATPAudioConverter+Properties.h in Headers */,
+				F601DF9123F2DF730030119E /* NSValue+ATPAudioValueRange.h in Headers */,
+				F601DF8623F2DF730030119E /* ATPAudioCompressionSession.h in Headers */,
+				F61D98D823F2F2B6002A0DD7 /* AudioToolboxPlus_iOS.h in Headers */,
+				F601DF8D23F2DF730030119E /* TPCircularBuffer.h in Headers */,
+				F601DF8723F2DF730030119E /* NSError+ATPError.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		B6BD11571DDDD75800505E9F /* AudioToolboxPlus */ = {
+		F601DEB723F2BB4B0030119E /* AudioToolboxPlus-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B6BD115E1DDDD75800505E9F /* Build configuration list for PBXNativeTarget "AudioToolboxPlus" */;
+			buildConfigurationList = F601DECC23F2BB4B0030119E /* Build configuration list for PBXNativeTarget "AudioToolboxPlus-iOS" */;
 			buildPhases = (
-				B6BD11541DDDD75800505E9F /* Sources */,
+				F601DEB323F2BB4B0030119E /* Headers */,
+				F601DEB423F2BB4B0030119E /* Sources */,
+				F601DEB523F2BB4B0030119E /* Frameworks */,
+				F601DEB623F2BB4B0030119E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = AudioToolboxPlus;
-			productName = AudioToolboxPlus;
-			productReference = B6BD11581DDDD75800505E9F /* libAudioToolboxPlus.a */;
-			productType = "com.apple.product-type.library.static";
+			name = "AudioToolboxPlus-iOS";
+			productName = "AudioToolboxPlus-iOS";
+			productReference = F601DEB823F2BB4B0030119E /* AudioToolboxPlus_iOS.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		50A0A0D918EAED5A00F20799 /* Project object */ = {
+		F601DEAF23F2BB4B0030119E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = McZonk;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = boinx;
 				TargetAttributes = {
-					B6BD11571DDDD75800505E9F = {
-						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 6372P8EH2J;
-						ProvisioningStyle = Automatic;
+					F601DEB723F2BB4B0030119E = {
+						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 50A0A0DC18EAED5A00F20799 /* Build configuration list for PBXProject "AudioToolboxPlus-iOS" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			buildConfigurationList = F601DEB223F2BB4B0030119E /* Build configuration list for PBXProject "AudioToolboxPlus-iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 50A0A0D818EAED5A00F20799;
-			productRefGroup = 50A0A0E218EAED5A00F20799 /* Products */;
+			mainGroup = F601DEAE23F2BB4B0030119E;
+			productRefGroup = F601DEB923F2BB4B0030119E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B6BD11571DDDD75800505E9F /* AudioToolboxPlus */,
+				F601DEB723F2BB4B0030119E /* AudioToolboxPlus-iOS */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		F601DEB623F2BB4B0030119E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		B6BD11541DDDD75800505E9F /* Sources */ = {
+		F601DEB423F2BB4B0030119E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95DB8F561E7BED6500130EED /* TPCircularBuffer.c in Sources */,
-				B6BD11611DDDD76E00505E9F /* ATPAudioConverter.m in Sources */,
-				B6BD11621DDDD76E00505E9F /* ATPAudioConverter+Properties.m in Sources */,
-				B6BD11631DDDD76E00505E9F /* ATPAudioConverter+PropertiesFromDictionary.m in Sources */,
-				B6BD11641DDDD76E00505E9F /* ATPAudioCompressionSession.m in Sources */,
-				95DB8F571E7BED6500130EED /* TPCircularBuffer+AudioBufferList.c in Sources */,
-				B6BD11651DDDD76E00505E9F /* NSError+ATPError.m in Sources */,
-				B6BD11661DDDD76E00505E9F /* NSValue+ATPAudioValueRange.m in Sources */,
+				F601DF8A23F2DF730030119E /* NSError+ATPError.m in Sources */,
+				F601DF8E23F2DF730030119E /* ATPAudioConverter+PropertiesFromDictionary.m in Sources */,
+				F601DF8C23F2DF730030119E /* NSValue+ATPAudioValueRange.m in Sources */,
+				F601DF9323F2DF730030119E /* ATPAudioConverter.m in Sources */,
+				F601DF8823F2DF730030119E /* ATPAudioCompressionSession.m in Sources */,
+				F601DF8923F2DF730030119E /* TPCircularBuffer+AudioBufferList.c in Sources */,
+				F601DF9523F2DF730030119E /* TPCircularBuffer.c in Sources */,
+				F601DF9423F2DF730030119E /* ATPAudioConverter+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		50A0A10318EAED5A00F20799 /* Debug */ = {
+		F601DECA23F2BB4B0030119E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -220,37 +275,53 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		50A0A10418EAED5A00F20799 /* Release */ = {
+		F601DECB23F2BB4B0030119E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -259,78 +330,87 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		B6BD115F1DDDD75800505E9F /* Debug */ = {
+		F601DECD23F2BB4B0030119E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6372P8EH2J;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "boinx.com.AudioToolboxPlus-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		B6BD11601DDDD75800505E9F /* Release */ = {
+		F601DECE23F2BB4B0030119E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6372P8EH2J;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "boinx.com.AudioToolboxPlus-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		50A0A0DC18EAED5A00F20799 /* Build configuration list for PBXProject "AudioToolboxPlus-iOS" */ = {
+		F601DEB223F2BB4B0030119E /* Build configuration list for PBXProject "AudioToolboxPlus-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50A0A10318EAED5A00F20799 /* Debug */,
-				50A0A10418EAED5A00F20799 /* Release */,
+				F601DECA23F2BB4B0030119E /* Debug */,
+				F601DECB23F2BB4B0030119E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B6BD115E1DDDD75800505E9F /* Build configuration list for PBXNativeTarget "AudioToolboxPlus" */ = {
+		F601DECC23F2BB4B0030119E /* Build configuration list for PBXNativeTarget "AudioToolboxPlus-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6BD115F1DDDD75800505E9F /* Debug */,
-				B6BD11601DDDD75800505E9F /* Release */,
+				F601DECD23F2BB4B0030119E /* Debug */,
+				F601DECE23F2BB4B0030119E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 50A0A0D918EAED5A00F20799 /* Project object */;
+	rootObject = F601DEAF23F2BB4B0030119E /* Project object */;
 }

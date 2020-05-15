@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:AudioToolboxPlus-OSX.xcodeproj">
+      location = "self:AudioToolboxPlus-iOS.xcodeproj">
    </FileRef>
 </Workspace>
