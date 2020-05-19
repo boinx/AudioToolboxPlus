@@ -8,22 +8,22 @@
 
 
 //! Project version number for AudioToolboxPlus.
-FOUNDATION_EXPORT double AudioToolboxPlusVersionNumber;
+//FOUNDATION_EXPORT double AudioToolboxPlusVersionNumber;
 
 //! Project version string for AudioToolboxPlus.
-FOUNDATION_EXPORT const unsigned char AudioToolboxPlusVersionString[];
+//FOUNDATION_EXPORT const unsigned char AudioToolboxPlusVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <AudioToolboxPlus/PublicHeader.h>
 
-#import <AudioToolboxPlus/ATPAudioCompressionSession.h>
+#import "ATPAudioCompressionSession.h"
 
-#import <AudioToolboxPlus/ATPAudioConverter.h>
-#import <AudioToolboxPlus/ATPAudioConverter+Properties.h>
-#import <AudioToolboxPlus/ATPAudioConverter+PropertiesFromDictionary.h>
+#import "ATPAudioConverter.h"
+#import "ATPAudioConverter+Properties.h"
+#import "ATPAudioConverter+PropertiesFromDictionary.h"
 
-#import <AudioToolboxPlus/NSError+ATPError.h>
+#import "NSError+ATPError.h"
 
-#import <AudioToolboxPlus/NSValue+ATPAudioValueRange.h>
+#import "NSValue+ATPAudioValueRange.h"
 
-#import <AudioToolboxPlus/TPCircularBuffer.h>
-#import <AudioToolboxPlus/TPCircularBuffer+AudioBufferList.h>
+#import "TPCircularBuffer.h"
+#import "TPCircularBuffer+AudioBufferList.h"
