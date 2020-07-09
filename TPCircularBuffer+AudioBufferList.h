@@ -33,7 +33,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
+// Double-quoted include warning can not be fixed with Double-quoted because it produces a:
+// ERROR: Include of non-modular header inside framework module
 #include "TPCircularBuffer.h"
 #include <AudioToolbox/AudioToolbox.h>
 

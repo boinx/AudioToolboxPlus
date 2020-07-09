@@ -15,6 +15,9 @@
 
 // In this header, you should import all the public headers of your framework using statements like #import <AudioToolboxPlus/PublicHeader.h>
 
+// Double-quoted include warnings can not be fixed with Double-quoted because it produces a:
+// ERROR: Include of non-modular header inside framework module
+
 #import "ATPAudioCompressionSession.h"
 
 #import "ATPAudioConverter.h"
