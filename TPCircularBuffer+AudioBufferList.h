@@ -93,6 +93,8 @@ void TPCircularBufferProduceAudioBufferList(TPCircularBuffer *buffer, const Audi
  */
 bool TPCircularBufferCopyAudioBufferList(TPCircularBuffer *buffer, const AudioBufferList *bufferList, const AudioTimeStamp *timestamp, UInt32 frames, const AudioStreamBasicDescription *audioFormat);
 
+bool isSpaceAvailable(TPCircularBuffer *buffer, UInt32 numberOfBuffers, UInt32 bytesPerBuffer, const AudioTimeStamp *inTimestamp);
+bool isSpaceAvailableIn(TPCircularBuffer *buffer, const AudioBufferList *inBufferList, const AudioTimeStamp *inTimestamp, UInt32 frames, const AudioStreamBasicDescription *audioDescription);
 /*!
  * Get a pointer to the next stored buffer list
  *
@@ -231,3 +233,4 @@ UInt32 TPCircularBufferGetAvailableSpace(TPCircularBuffer *buffer, const AudioSt
 #endif
 
 #endif
+

@@ -45,7 +45,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <assert.h>
-
+#include <stdio.h>
 #ifdef __cplusplus
     extern "C++" {
         #include <atomic>
@@ -152,6 +152,7 @@ static __inline__ __attribute__((always_inline)) void* TPCircularBufferTail(TPCi
  * @param amount Number of bytes to consume
  */
 static __inline__ __attribute__((always_inline)) void TPCircularBufferConsume(TPCircularBuffer *buffer, uint32_t amount) {
+    assert(amount >= 0);
     buffer->tail = (buffer->tail + amount) % buffer->length;
     if ( buffer->atomic ) {
         atomicFetchAdd(&buffer->fillCount, -(int)amount);

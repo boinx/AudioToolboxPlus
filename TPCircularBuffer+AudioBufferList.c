@@ -43,10 +43,23 @@ static inline unsigned long min(unsigned long a, unsigned long b) {
     return a > b ? b : a;
 }
 
+bool isSpaceAvailable(TPCircularBuffer *buffer, UInt32 numberOfBuffers, UInt32 bytesPerBuffer, const AudioTimeStamp *inTimestamp) {
+    uint32_t availableBytes;
+    uint32_t tmp = sizeof(TPCircularBufferABLBlockHeader)+((numberOfBuffers-1)*sizeof(AudioBuffer))+(numberOfBuffers*bytesPerBuffer);
+    TPCircularBufferABLBlockHeader *block = (TPCircularBufferABLBlockHeader*)TPCircularBufferHead(buffer, &availableBytes);
+    bool isSpaceUnAvailable = ( !block || availableBytes < tmp );
+    //printf("\navailableBytes = %d, tmp = %d",availableBytes, tmp);
+    return !isSpaceUnAvailable;
+}
+
 AudioBufferList *TPCircularBufferPrepareEmptyAudioBufferList(TPCircularBuffer *buffer, UInt32 numberOfBuffers, UInt32 bytesPerBuffer, const AudioTimeStamp *inTimestamp) {
     uint32_t availableBytes;
+    uint32_t tmp = sizeof(TPCircularBufferABLBlockHeader)+((numberOfBuffers-1)*sizeof(AudioBuffer))+(numberOfBuffers*bytesPerBuffer);
     TPCircularBufferABLBlockHeader *block = (TPCircularBufferABLBlockHeader*)TPCircularBufferHead(buffer, &availableBytes);
-    if ( !block || availableBytes < sizeof(TPCircularBufferABLBlockHeader)+((numberOfBuffers-1)*sizeof(AudioBuffer))+(numberOfBuffers*bytesPerBuffer) ) return NULL;
+    
+    if ( !block || availableBytes < tmp ){
+        return NULL;
+    }
     
     #ifdef DEBUG
     assert(!((unsigned long)block & 0xF) /* Beware unaligned accesses */);
@@ -119,6 +132,13 @@ void TPCircularBufferProduceAudioBufferList(TPCircularBuffer *buffer, const Audi
     block->totalLength = calculatedLength;
     
     TPCircularBufferProduce(buffer, block->totalLength);
+}
+
+bool isSpaceAvailableIn(TPCircularBuffer *buffer, const AudioBufferList *inBufferList, const AudioTimeStamp *inTimestamp, UInt32 frames, const AudioStreamBasicDescription *audioDescription) {
+    if ( frames == 0 ) return true;
+    UInt32 byteCount = inBufferList->mBuffers[0].mDataByteSize;
+    if ( byteCount == 0 ) return true;
+    return isSpaceAvailable(buffer, inBufferList->mNumberBuffers, byteCount, inTimestamp);
 }
 
 bool TPCircularBufferCopyAudioBufferList(TPCircularBuffer *buffer, const AudioBufferList *inBufferList, const AudioTimeStamp *inTimestamp, UInt32 frames, const AudioStreamBasicDescription *audioDescription) {
