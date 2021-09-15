@@ -280,6 +280,13 @@ UInt32 TPCircularBufferPeekContiguousWrapped(TPCircularBuffer *buffer, AudioTime
     UInt32 byteCount = 0;
     
     while ( 1 ) {
+		if(block->bufferList.mNumberBuffers == 0)
+		{
+			// This condition (block->bufferList.mNumberBuffers == 0) leads to an endless loop,
+			// causing movies to stop.
+			// If there are no buffers we don't allowed to fetch mBuffers[0] in the next line anyways.
+			break;
+		}
         byteCount += block->bufferList.mBuffers[0].mDataByteSize;
         TPCircularBufferABLBlockHeader *nextBlock = (TPCircularBufferABLBlockHeader*)((char*)block + block->totalLength);
         if ( (void*)nextBlock >= end ) {
